@@ -1,4 +1,5 @@
 from selenium import webdriver
+from selenium.webdriver.common.by import By
 import time
 
 try:
@@ -8,19 +9,18 @@ try:
 
     # Ваш код, который заполняет обязательные поля
 
-    input1 = browser.find_element_by_xpath('//input[@placeholder = "Input your first name"]')
-    input1.send_keys("first")
-    input2 = browser.find_element_by_xpath('//input[@placeholder = "Input your last name"]')
-    input2.send_keys("last")
-    input3 = browser.find_element_by_xpath('//input[@placeholder = "Input your email"]')
-    input3.send_keys("email")
+    first_name = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.first").send_keys('First name')
+
+    last_name = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.second").send_keys('Last name')
+
+    email = browser.find_element(By.CSS_SELECTOR, ".first_block .form-control.third").send_keys('email@ya.ru')
 
     # Отправляем заполненную форму
     button = browser.find_element_by_css_selector("button.btn")
     button.click()
 
     # Проверяем, что смогли зарегистрироваться
-    # Ждем загрузки страницы
+    # ждем загрузки страницы
     time.sleep(1)
 
     # находим элемент, содержащий текст
@@ -28,12 +28,11 @@ try:
     # записываем в переменную welcome_text текст из элемента welcome_text_elt
     welcome_text = welcome_text_elt.text
 
-    # с помощью assert проверяем, что ожидаемый результат совпадает с текстом на странице сайта
+    # с помощью assert проверяем, что ожидаемый текст совпадает с текстом на странице сайта
     assert "Congratulations! You have successfully registered!" == welcome_text
 
 finally:
-    # ожидание, чтобы визуально оценить результаты прохождения скрипта
+    # ожидание чтобы визуально оценить результаты прохождения скрипта
     time.sleep(10)
-    # закрываем браузер
+    # закрываем браузер после всех манипуляций
     browser.quit()
-
