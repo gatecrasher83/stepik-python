@@ -1,0 +1,20 @@
+1636471381321	geckodriver	INFO	Listening on 127.0.0.1:57839
+1636471381387	mozrunner::runner	INFO	Running command: "C:\\Program Files\\Mozilla Firefox\\firefox.exe" "--marionette" "-no-remote" "-profile" "C:\\Users\\V\\AppData\\Local\\Temp\\rust_mozprofilevDn5XO"
+1636471382167	Marionette	INFO	Marionette enabled
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new NotFoundError("Could not open the file at C:\\Users\\V\\AppData\\Local\\Temp\\rust_mozprofilevDn5XO\\search.json.mozlz4", (void 0)))
+1636471388046	Marionette	INFO	Listening on port 57844
+1636471388623	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: http://selenium1py.pythonanywhere.com/ru/, line 374: ReferenceError: oscar is not defined
+1636471391284	Marionette	INFO	Stopped listening on port 57844
+console.warn: SearchService: "_init: abandoning init due to shutting down"
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+JavaScript error: , line 0: uncaught exception: 2147500036
+[Parent 12960, IPC I/O Parent] WARNING: file /builds/worker/checkouts/gecko/ipc/chromium/src/base/process_util_win.cc:167
+JavaScript error: resource://gre/modules/CrashManager.jsm, line 828: AbortError: IOUtils: Shutting down and refusing additional I/O tasks
